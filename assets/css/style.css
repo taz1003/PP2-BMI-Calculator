@@ -72,3 +72,79 @@ h2 i, h3 i {
 .body-type-group input[type="radio"] {
     margin-right: 5px;
 }
+
+.calc-bmi {
+    display: block;
+    width: 100%;
+    background-color: #009688;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 12px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.calc-bmi:hover {
+    background-color: #00796b;
+}
+
+/* Results area */
+#bmi-calc, #bmr-calc {
+    max-width: 400px;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: #ffffff;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculation {
+    text-align: center;
+}
+
+#bmi-info h3 {
+    color: #009688;
+    margin-bottom: 10px;
+}
+
+#bmi-info p {
+    color: #757575;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+#bmi-info strong {
+    color: #474545;
+}
+
+#bmi-info em {
+    color: #009688;
+    font-style: normal;
+}
+
+/** Media queries **/
+
+/* Media queries for tablets (768px & up) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    #info-area, #bmi-calc, #bmr-calc, #bmi-info {
+        max-width: 90%;
+        padding: 18px;
+    }
+
+    h1, h2 {
+        font-size: 25px;
+    }
+
+    .calc-bmi {
+        padding: 10px;
+    }
+}
