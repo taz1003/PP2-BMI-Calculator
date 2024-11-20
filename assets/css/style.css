@@ -135,6 +135,10 @@ h2 i, h3 i {
         padding: 15px;
     }
 
+    #logo {
+        width: 300px;
+    }
+
     #info-area, #bmi-calc, #bmr-calc, #bmi-info {
         max-width: 90%;
         padding: 18px;
@@ -146,5 +150,39 @@ h2 i, h3 i {
 
     .calc-bmi {
         padding: 10px;
+    }
+}
+
+/* Media queries for screens (480px & up) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    #logo {
+        width: 250px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    #info-area, #bmi-calc, #bmr-calc, #bmi-info {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    #info-area label, #bmi-info p {
+        font-size: 14px;
+    }
+
+    #info-area input[type="number"], .calc-bmi {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .calc-bmi {
+        font-size: 12px;
     }
 }
