@@ -3,9 +3,9 @@ let calculateButton = document.getElementById("calculate-button");
 calculateButton.addEventListener('click', function () {
 
     // Get necessary input values
-    let age = document.getElementById("age").value;
-    let height = document.getElementById("height").value;
-    let weight = document.getElementById("weight").value;
+    let age = parseInt(document.getElementById("age").value);
+    let height = parseFloat(document.getElementById("height").value);
+    let weight = parseFloat(document.getElementById("weight").value);
 
     let bodyType;
     if (document.getElementById('male').checked) {
@@ -29,6 +29,6 @@ calculateButton.addEventListener('click', function () {
 
 function bmiCalculation() {
 
-};
+}
 
 // function bmrCalculation();
