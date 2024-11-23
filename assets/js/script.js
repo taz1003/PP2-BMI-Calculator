@@ -35,7 +35,20 @@ calculateButton.addEventListener('click', function () {
  */
 function bmiCalculation(weight, height) {
     let userBmi = weight / (height * height);
-    let roundedUserBmi = Math.round(userBmi * 100) / 100;
+    let roundedUserBmi = Math.round(userBmi * 100) / 100; // Rounds upto two decimal places
     document.getElementById("bmi-value").textContent = `${roundedUserBmi}`
+
+    let category;
+    if (roundedUserBmi <= 18.5) {
+        category = "Underweight"
+    } else if (roundedUserBmi > 18.5 && roundedUserBmi <= 24.9) {
+        category = "Normal weight"
+    } else if (roundedUserBmi > 24.9 && roundedUserBmi <= 29.9) {
+        category = "Overweight"
+    } else {
+        category = "Obesity"
+    }
+    document.getElementById("bmi-category").textContent = category;
 }
+
 // function bmrCalculation();

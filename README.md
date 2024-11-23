@@ -1,1 +1,2 @@
 error 1 : had to add (id = "calculate-button") to make sure the eventListener for the calculate button worked. Wasnt working with just class name.
+Wasnt able to get BMI value, was getting NaN. Fixed it after some research on google and youtube. Learned to add arguments to pass them into broader scope.
