@@ -26,12 +26,13 @@ calculateButton.addEventListener('click', function () {
         alert("Please select your body-type");
     }
 
-    // Call the BMI calculation function
+    // Call the BMI & BMR calculation function
     bmiCalculation(weight, height);
+    bmrCalculation(weight, height, age, bodyType);
 });
 
 /**
- * Calculates value of BMI using values of height and weight
+ * Calculates value of BMI using values of height and weight.
  */
 function bmiCalculation(weight, height) {
     let userBmi = weight / (height * height);
@@ -51,4 +52,15 @@ function bmiCalculation(weight, height) {
     document.getElementById("bmi-category").textContent = category;
 }
 
-// function bmrCalculation();
+/** 
+ * Calculates value of BMR using weight, height, age and body type.
+ */
+function bmrCalculation(weight, height, age, bodyType) {
+    let userBmr;
+    if (bodyType === 'male') {
+        userBmr = (10 * weight) + (6.25 * (height * 100)) - (5 * age) + 5 // converts height back to cm
+    } else {
+        userBmr = (10 * weight) + (6.25 * (height * 100)) - (5 * age) - 161 // converts height back to cm
+    }
+    document.getElementById("bmr-value").textContent = Math.round(userBmr) + " calories/day";
+};

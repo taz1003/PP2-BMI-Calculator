@@ -36,10 +36,10 @@
                 <label for="female">Female</label>
                 <input type="radio" class="body-type" id="female" name="body-type" value="female" data-type="female">
             </p>
-            <label for="height">Height (in kg):</label>
+            <label for="height">Height (in cm):</label>
             <input type="number" id="height" name="height" min="10" data-type="height">
             <br>
-            <label for="weight">Weight (in cm):</label>
+            <label for="weight">Weight (in kg):</label>
             <input type="number" id="weight" name="weight" min="1" data-type="weight">
             <br>
             <button id="calculate-button" class="calc-bmi">Calculate BMI & BMR</button>
@@ -52,7 +52,7 @@
     </div>
 
     <div id="bmr-calc" class="calculation" data-type="bmr-calc">
-        <p>Your BMR is: <span data-type="bmr-value">0</span></p>
+        <p>Your BMR is: <span data-type="bmr-value" id="bmr-value">0</span></p>
     </div>
 
     <div id="bmi-info">
