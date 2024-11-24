@@ -27,6 +27,10 @@ calculateButton.addEventListener('click', function () {
         isValid = false;
         errorMessage("error-age", "Please enter a valid age");
         return;
+    } else if (!bodyType) {
+        isValid = false;
+        errorMessage("error-bodytype", "Please select your body type");
+        return;
     } else if (!height) {
         isValid = false;
         errorMessage("error-height", "Please enter your height");
@@ -34,10 +38,6 @@ calculateButton.addEventListener('click', function () {
     } else if (!weight) {
         isValid = false;
         errorMessage("error-weight", "Please enter your weight");
-        return;
-    } else if (!bodyType) {
-        isValid = false;
-        errorMessage("error-bodytype", "Please select your body type");
         return;
     }
 

@@ -65,15 +65,34 @@ h2 i, h3 i {
     margin: 10px 0;
 }
 
+#age:hover, #height:hover, #weight:hover {
+    border: 2px solid #009688;
+    background-color: #e0f2f1;
+    transition: all 0.3s;
+}
+
 .body-type-group label {
     margin: 0;
+    cursor: pointer;
 }
 
 .body-type-group input[type="radio"] {
     margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    border: 2px solid #009688;
+    border-radius: 20%;
+    appearance: none;
 }
 
-.calc-bmi {
+.body-type-group input[type="radio"]:checked {
+    background-color: #009688;
+    border-color: #15514a;
+    transition: all 0.4s;
+}
+
+.calc-bmi-button {
     display: block;
     width: 100%;
     background-color: #009688;
@@ -85,15 +104,20 @@ h2 i, h3 i {
     margin-top: 12px;
     font-size: 17px;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
-.calc-bmi:hover {
-    background-color: #00796b;
+.calc-bmi-button:hover {
+    background-color: #15514a;
+}
+
+#reset-button {
+    background-color: #E0E0E0;
+    color: #333333;
 }
 
 #reset-button:hover {
-    background-color: #E0E0E0;
-    color: #333333;
+    background-color: #aeb4b2;
 }
 
 /* Results area */
