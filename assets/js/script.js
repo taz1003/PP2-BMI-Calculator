@@ -74,15 +74,12 @@ function bmrCalculation(weight, height, age, bodyType) {
  * Resets the form
  */
 function resetButton() {
-    let reset = document.getElementById("reset-button");
-    if (reset.onclick) {
-        age.value = ``;
-        height.value = ``;
-        weight.value = ``;
-        document.getElementById("male").checked = false;
-        document.getElementById("female").checked = false;
-        document.getElementById("bmi-value").textContent = `0`;
-        document.getElementById("bmi-category").textContent = ``;
-        document.getElementById("bmr-value").textContent = `0`;
-    }
+    document.getElementById("age").value = ``;
+    document.getElementById("height").value = ``;
+    document.getElementById("weight").value = ``;
+    document.getElementById("male").checked = false;
+    document.getElementById("female").checked = false;
+    document.getElementById("bmi-value").textContent = `0`;
+    document.getElementById("bmi-category").textContent = ``;
+    document.getElementById("bmr-value").textContent = `0`;
 }
