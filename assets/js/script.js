@@ -35,11 +35,19 @@ calculateButton.addEventListener('click', function () {
         isValid = false;
         errorMessage("error-height", "Please enter your height");
         return;
-    } else if (!weight) {
+    } else if (height <= 0) {
+        isValid = false;
+        errorMessage("error-height", "Please enter a valid height");
+        return;
+    }  else if (!weight) {
         isValid = false;
         errorMessage("error-weight", "Please enter your weight");
         return;
-    }
+    } else if (weight <= 0) {
+        isValid = false;
+        errorMessage("error-weight", "Please enter a valid weight");
+        return;
+    } 
 
     // Call the BMI & BMR calculation function
     if (isValid) {
