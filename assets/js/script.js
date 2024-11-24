@@ -1,11 +1,24 @@
-// Retrieve calculation button and add function to retrieve input values and then, form validation
+// Activate calculation button
 let calculateButton = document.getElementById("calculate-button");
 calculateButton.addEventListener('click', function () {
+    mainBmiBmr();
+});
 
-    // Get necessary input values
+// Activate calculation using "Enter" on keyboard
+document.addEventListener('keydown', function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        mainBmiBmr();
+    }
+})
+
+/**
+ * Get necessary input values, shows errors for invalid
+ * inputs and calculates bmi & bmr values
+ */
+function mainBmiBmr() {
     let age = parseInt(document.getElementById("age").value);
-    // Convert height value from cm to m
-    let height = parseFloat(document.getElementById("height").value) / 100;
+    let height = parseFloat(document.getElementById("height").value) / 100; // Convert from cm to m
     let weight = parseFloat(document.getElementById("weight").value);
 
     let bodyType;
@@ -17,12 +30,12 @@ calculateButton.addEventListener('click', function () {
 
     clearError(); // Clears error messages
 
-    // Makes sure to validate the form
+    // Validates the form
     let isValid = true;
     if (!age) {
         isValid = false;
         errorMessage("error-age", "Please enter your age");
-        return;
+        return; // Stops further process
     } else if (age < 2 || age > 110) {
         isValid = false;
         errorMessage("error-age", "Please enter a valid age");
@@ -39,7 +52,7 @@ calculateButton.addEventListener('click', function () {
         isValid = false;
         errorMessage("error-height", "Please enter a valid height");
         return;
-    }  else if (!weight) {
+    } else if (!weight) {
         isValid = false;
         errorMessage("error-weight", "Please enter your weight");
         return;
@@ -47,14 +60,14 @@ calculateButton.addEventListener('click', function () {
         isValid = false;
         errorMessage("error-weight", "Please enter a valid weight");
         return;
-    } 
+    }
 
     // Call the BMI & BMR calculation function
     if (isValid) {
         bmiCalculation(weight, height);
         bmrCalculation(weight, height, age, bodyType);
     }
-});
+}
 
 /** 
  * Shows error message for invalid form input.
@@ -119,7 +132,7 @@ function bmrCalculation(weight, height, age, bodyType) {
         userBmr = (10 * weight) + (6.25 * (height * 100)) - (5 * age) - 161 // converts height back to cm
     }
     document.getElementById("bmr-value").textContent = Math.round(userBmr) + " calories/day";
-};
+}
 
 /**
  * Resets the form.
@@ -129,7 +142,7 @@ function resetButton() {
     const resetIds = ["age", "height", "weight"];
     for (const resetId of resetIds) {
         document.getElementById(resetId).value = ``;
-    }
+    };
     document.getElementById("male").checked = false;
     document.getElementById("female").checked = false;
     document.getElementById("bmi-value").textContent = `0`;
