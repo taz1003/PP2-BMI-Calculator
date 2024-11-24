@@ -15,25 +15,53 @@ calculateButton.addEventListener('click', function () {
         bodyType = 'female';
     }
 
-    // Making sure to validate the form
+    clearError(); // Clears any error message
+
+    // Makes sure to validate the form
+    let isValid = true
     if (!age) {
-        alert("Please add your age");
+        isValid = false
+        errorMessage("error-age", "Please add your age");
         return;
     } else if (!height) {
-        alert("Please add your height");
+        isValid = false
+        errorMessage("error-height", "Please add your height");
         return;
     } else if (!weight) {
-        alert("Please add your weight");
+        isValid = false
+        errorMessage("error-weight", "Please add your weight");
         return;
     } else if (!bodyType) {
-        alert("Please select your body-type");
+        isValid = false
+        errorMessage("error-bodytype", "Please add your body type");
         return;
     }
 
     // Call the BMI & BMR calculation function
-    bmiCalculation(weight, height);
-    bmrCalculation(weight, height, age, bodyType);
+    if (isValid) {
+        bmiCalculation(weight, height);
+        bmrCalculation(weight, height, age, bodyType);
+    }
 });
+
+/** 
+ * Shows error message for invalid form input.
+ */
+function errorMessage(elementId, message) {
+    let errorElement = document.getElementById(elementId);
+    errorElement.textContent = message;
+    errorElement.style.color = 'red';
+}
+
+/** 
+ * Removes error messages
+ */
+function clearError() {
+    document.getElementById("error-age").textContent = ``;
+    document.getElementById("error-height").textContent = ``;
+    document.getElementById("error-weight").textContent = ``;
+    document.getElementById("error-bodytype").textContent = ``;
+}
 
 /**
  * Calculates value of BMI using values of height and weight.
@@ -71,7 +99,7 @@ function bmrCalculation(weight, height, age, bodyType) {
 };
 
 /**
- * Resets the form
+ * Resets the form.
  */
 function resetButton() {
     document.getElementById("age").value = ``;
