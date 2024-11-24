@@ -91,6 +91,11 @@ h2 i, h3 i {
     background-color: #00796b;
 }
 
+#reset-button:hover {
+    background-color: #E0E0E0;
+    color: #333333;
+}
+
 /* Results area */
 #bmi-calc, #bmr-calc {
     max-width: 400px;

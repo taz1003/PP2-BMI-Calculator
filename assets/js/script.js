@@ -18,12 +18,16 @@ calculateButton.addEventListener('click', function () {
     // Making sure to validate the form
     if (!age) {
         alert("Please add your age");
+        return;
     } else if (!height) {
         alert("Please add your height");
+        return;
     } else if (!weight) {
         alert("Please add your weight");
+        return;
     } else if (!bodyType) {
         alert("Please select your body-type");
+        return;
     }
 
     // Call the BMI & BMR calculation function
@@ -35,9 +39,10 @@ calculateButton.addEventListener('click', function () {
  * Calculates value of BMI using values of height and weight.
  */
 function bmiCalculation(weight, height) {
+    let bmiUnit = `kg/m\u00B2`; // Shows kg/m^2 as the bmi unit
     let userBmi = weight / (height * height);
     let roundedUserBmi = Math.round(userBmi * 100) / 100; // Rounds upto two decimal places
-    document.getElementById("bmi-value").textContent = `${roundedUserBmi}`
+    document.getElementById("bmi-value").textContent = `${roundedUserBmi} ${bmiUnit}`;
 
     let category;
     if (roundedUserBmi <= 18.5) {
@@ -64,3 +69,20 @@ function bmrCalculation(weight, height, age, bodyType) {
     }
     document.getElementById("bmr-value").textContent = Math.round(userBmr) + " calories/day";
 };
+
+/**
+ * Resets the form
+ */
+function resetButton() {
+    let reset = document.getElementById("reset-button");
+    if (reset.onclick) {
+        age.value = ``;
+        height.value = ``;
+        weight.value = ``;
+        document.getElementById("male").checked = false;
+        document.getElementById("female").checked = false;
+        document.getElementById("bmi-value").textContent = `0`;
+        document.getElementById("bmi-category").textContent = ``;
+        document.getElementById("bmr-value").textContent = `0`;
+    }
+}
