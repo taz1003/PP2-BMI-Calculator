@@ -111,6 +111,30 @@ h2 i, h3 i {
     text-align: center;
 }
 
+.bmi-value-class {
+    font-weight: bold;
+}
+
+.underweight {
+    color: blue;
+    font-weight: bold;
+}
+
+.normal-weight {
+    color: green;
+    font-weight: bold;
+}
+
+.overweight {
+    color: rgba(255, 128, 0, 0.97);
+    font-weight: bold;
+}
+
+.obesity {
+    color: rgb(197, 4, 4);
+    font-weight: bold;
+}
+
 #bmi-info h3 {
     color: #009688;
     margin-bottom: 10px;

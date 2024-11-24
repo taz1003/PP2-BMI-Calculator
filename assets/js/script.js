@@ -4,7 +4,7 @@ calculateButton.addEventListener('click', function () {
 
     // Get necessary input values
     let age = parseInt(document.getElementById("age").value);
-    // Convert height value from m to cm
+    // Convert height value from cm to m
     let height = parseFloat(document.getElementById("height").value) / 100;
     let weight = parseFloat(document.getElementById("weight").value);
 
@@ -18,9 +18,9 @@ calculateButton.addEventListener('click', function () {
     clearError(); // Clears error messages
 
     // Makes sure to validate the form
-    let isValid = true
+    let isValid = true;
     if (!age) {
-        isValid = false
+        isValid = false;
         errorMessage("error-age", "Please enter your age");
         return;
     } else if (age < 2 || age > 110) {
@@ -28,15 +28,15 @@ calculateButton.addEventListener('click', function () {
         errorMessage("error-age", "Please enter a valid age");
         return;
     } else if (!height) {
-        isValid = false
+        isValid = false;
         errorMessage("error-height", "Please enter your height");
         return;
     } else if (!weight) {
-        isValid = false
+        isValid = false;
         errorMessage("error-weight", "Please enter your weight");
         return;
     } else if (!bodyType) {
-        isValid = false
+        isValid = false;
         errorMessage("error-bodytype", "Please select your body type");
         return;
     }
@@ -79,17 +79,25 @@ function bmiCalculation(weight, height) {
     let roundedUserBmi = Math.round(userBmi * 100) / 100; // Rounds upto two decimal places
     document.getElementById("bmi-value").textContent = `${roundedUserBmi} ${bmiUnit}`;
 
+    let bmiCategory = document.getElementById("bmi-category");
+
     let category;
     if (roundedUserBmi <= 18.5) {
-        category = "Underweight"
+        category = "Underweight";
+        categoryClass = 'underweight';
     } else if (roundedUserBmi > 18.5 && roundedUserBmi <= 24.9) {
-        category = "Normal weight"
+        category = "Normal weight";
+        categoryClass = 'normal-weight';
     } else if (roundedUserBmi > 24.9 && roundedUserBmi <= 29.9) {
-        category = "Overweight"
+        category = "Overweight";
+        categoryClass = 'overweight';
     } else {
-        category = "Obesity"
+        category = "Obesity";
+        categoryClass = 'obesity';
     }
-    document.getElementById("bmi-category").textContent = category;
+
+    bmiCategory.textContent = category;
+    bmiCategory.className = categoryClass; // applies the classes
 }
 
 /** 
@@ -112,7 +120,7 @@ function resetButton() {
     clearError();
     const resetIds = ["age", "height", "weight"];
     for (const resetId of resetIds) {
-        document.getElementById(resetId).value= ``;
+        document.getElementById(resetId).value = ``;
     }
     document.getElementById("male").checked = false;
     document.getElementById("female").checked = false;
