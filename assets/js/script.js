@@ -15,25 +15,29 @@ calculateButton.addEventListener('click', function () {
         bodyType = 'female';
     }
 
-    clearError(); // Clears any error message
+    clearError(); // Clears error messages
 
     // Makes sure to validate the form
     let isValid = true
     if (!age) {
         isValid = false
-        errorMessage("error-age", "Please add your age");
+        errorMessage("error-age", "Please enter your age");
+        return;
+    } else if (age < 2 || age > 110) {
+        isValid = false;
+        errorMessage("error-age", "Please enter a valid age");
         return;
     } else if (!height) {
         isValid = false
-        errorMessage("error-height", "Please add your height");
+        errorMessage("error-height", "Please enter your height");
         return;
     } else if (!weight) {
         isValid = false
-        errorMessage("error-weight", "Please add your weight");
+        errorMessage("error-weight", "Please enter your weight");
         return;
     } else if (!bodyType) {
         isValid = false
-        errorMessage("error-bodytype", "Please add your body type");
+        errorMessage("error-bodytype", "Please select your body type");
         return;
     }
 
@@ -54,13 +58,16 @@ function errorMessage(elementId, message) {
 }
 
 /** 
- * Removes error messages
+ * Removes error messages.
  */
 function clearError() {
-    document.getElementById("error-age").textContent = ``;
-    document.getElementById("error-height").textContent = ``;
-    document.getElementById("error-weight").textContent = ``;
-    document.getElementById("error-bodytype").textContent = ``;
+    // Create an array of error-ids
+    const errorIds = ["error-age", "error-height", "error-weight", "error-bodytype"];
+
+    // Clears errors for the error-ids
+    for (const errorId of errorIds) {
+        document.getElementById(errorId).textContent = ``;
+    };
 }
 
 /**
@@ -102,12 +109,14 @@ function bmrCalculation(weight, height, age, bodyType) {
  * Resets the form.
  */
 function resetButton() {
-    document.getElementById("age").value = ``;
-    document.getElementById("height").value = ``;
-    document.getElementById("weight").value = ``;
+    clearError();
+    const resetIds = ["age", "height", "weight"];
+    for (const resetId of resetIds) {
+        document.getElementById(resetId).value= ``;
+    }
     document.getElementById("male").checked = false;
     document.getElementById("female").checked = false;
     document.getElementById("bmi-value").textContent = `0`;
-    document.getElementById("bmi-category").textContent = ``;
     document.getElementById("bmr-value").textContent = `0`;
+    document.getElementById("bmi-category").textContent = ``;
 }
