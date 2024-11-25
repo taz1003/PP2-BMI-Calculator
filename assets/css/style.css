@@ -92,6 +92,14 @@ h2 i, h3 i {
     transition: all 0.4s;
 }
 
+/* Error messages */
+.error {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Calculate button */
 .calc-bmi-button {
     display: block;
     width: 100%;
@@ -150,7 +158,7 @@ h2 i, h3 i {
 }
 
 .overweight {
-    color: rgba(255, 128, 0, 0.97);
+    color: rgb(255, 128, 0);
     font-weight: bold;
 }
 
@@ -172,6 +180,22 @@ h2 i, h3 i {
 
 #bmi-info strong {
     color: #474545;
+}
+
+#bmi-info #cate-underweight {
+    color: blue;
+}
+
+#bmi-info #cate-normal {
+    color: green;
+}
+
+#bmi-info #cate-overweight {
+    color: rgb(255, 128, 0);
+}
+
+#bmi-info #cate-obesity {
+    color: rgb(197, 4, 4);
 }
 
 #bmi-info em {
