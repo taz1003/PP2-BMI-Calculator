@@ -1,5 +1,10 @@
 /* Resetting defaults */
-body, h1, h2, h3, p, label {
+body,
+h1,
+h2,
+h3,
+p,
+label {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -23,13 +28,16 @@ body {
 }
 
 /* Headers */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
     margin-bottom: 20px;
     color: #009688;
 }
 
-h2 i, h3 i {
+h2 i,
+h3 i {
     color: #4CAF50;
 }
 
@@ -65,7 +73,9 @@ h2 i, h3 i {
     margin: 10px 0;
 }
 
-#age:hover, #height:hover, #weight:hover {
+#age:hover,
+#height:hover,
+#weight:hover {
     border: 2px solid #009688;
     background-color: #e0f2f1;
     transition: all 0.3s;
@@ -129,7 +139,8 @@ h2 i, h3 i {
 }
 
 /* Results area */
-#bmi-calc, #bmr-calc {
+#bmi-calc,
+#bmr-calc {
     max-width: 400px;
     padding: 20px;
     margin: 10px auto;
@@ -216,7 +227,9 @@ h2 i, h3 i {
         width: 300px;
     }
 
-    #info-area, #bmi-calc, #bmr-calc {
+    #info-area,
+    #bmi-calc,
+    #bmr-calc {
         max-width: 70%;
         padding: 18px;
     }
@@ -225,7 +238,8 @@ h2 i, h3 i {
         padding: 18px;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 25px;
     }
 
@@ -245,20 +259,26 @@ h2 i, h3 i {
         width: 250px;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 20px;
     }
 
-    #info-area, #bmi-calc, #bmr-calc, #bmi-info {
+    #info-area,
+    #bmi-calc,
+    #bmr-calc,
+    #bmi-info {
         max-width: 95%;
         padding: 10px;
     }
 
-    #info-area label, #bmi-info p {
+    #info-area label,
+    #bmi-info p {
         font-size: 14px;
     }
 
-    #info-area input[type="number"], .calc-bmi {
+    #info-area input[type="number"],
+    .calc-bmi {
         padding: 8px;
         font-size: 12px;
     }

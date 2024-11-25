@@ -27,43 +27,45 @@
 
     <div>
         <h2>Calculate Your BMI and BMR <i class="fa-solid fa-heart-pulse"></i></h2>
-        <div id="info-area" data-type="info-area">
+        <div id="info-area">
             <label for="age">Age (2 - 110):</label>
-            <input id="age" type="number" name="age" min="2" max="100" data-type="age">
+            <input id="age" type="number" name="age" min="2" max="100" aria-describedby="age">
             <span class="error" id="error-age"></span>
             <div class="body-type-group">
                 <p>Body Type:
                     <label for="male">
-                        <input type="radio" class="body-type" id="male" name="body-type" value="male" data-type="body-type">
+                        <input type="radio" class="body-type" id="male" name="body-type" value="male"
+                            aria-describedby="body-type">
                         Male</label>
                     <label for="female">
                         <input type="radio" class="body-type" id="female" name="body-type" value="female"
-                            data-type="body-type">
+                            aria-describedby="body-type">
                         Female</label>
                 </p>
                 <span class="error" id="error-bodytype"></span>
             </div>
             <label for="height">Height (in cm):</label>
-            <input type="number" id="height" name="height" min="10" data-type="height">
+            <input type="number" id="height" name="height" min="10" aria-describedby="height">
             <span class="error" id="error-height"></span>
             <br>
             <label for="weight">Weight (in kg):</label>
-            <input type="number" id="weight" name="weight" min="1" data-type="weight">
+            <input type="number" id="weight" name="weight" min="1" aria-describedby="weight">
             <span class="error" id="error-weight"></span>
             <br>
-            <button id="calculate-button" class="calc-bmi-button" aria-label="Calculate BMI and BMR">Calculate BMI & BMR</button>
+            <button id="calculate-button" class="calc-bmi-button" aria-label="Calculate BMI and BMR">Calculate BMI &
+                BMR</button>
 
             <button id="reset-button" onclick="resetButton()" class="calc-bmi-button" aria-label="Reset">Reset</button>
         </div>
     </div>
 
     <div id="bmi-calc" class="calculation" data-type="bmi-calc">
-        <p>Your BMI is: <span data-type="bmi-value" id="bmi-value" class="bmi-value-class">0</span></p>
-        <p>BMI category: <span data-type="bmi-category" id="bmi-category" class="bmi-value-class"></span></p>
+        <p>Your BMI is: <span aria-labelledby="bmi-value" id="bmi-value" class="bmi-value-class">0</span></p>
+        <p>BMI category: <span aria-labelledby="bmi-category" id="bmi-category" class="bmi-value-class"></span></p>
     </div>
 
     <div id="bmr-calc" class="calculation" data-type="bmr-calc">
-        <p>Your BMR is: <span data-type="bmr-value" id="bmr-value" class="bmi-value-class">0</span></p>
+        <p>Your BMR is: <span aria-labelledby="bmr-value" id="bmr-value" class="bmi-value-class">0</span></p>
     </div>
 
     <div id="bmi-info">
@@ -85,7 +87,8 @@
             <strong id="cate-underweight">Underweight:</strong> BMI less than 18.5 <br>
             <strong id="cate-normal">Normal weight:</strong> BMI between 18.5 and 24.9 <br>
             <strong id="cate-overweight">Overweight:</strong> BMI between 25 and 29.9 <br>
-            <strong id="cate-obesity">Obesity:</strong> BMI 30 and above (subdivided into Class I, II, and III for more severe obesity
+            <strong id="cate-obesity">Obesity:</strong> BMI 30 and above (subdivided into Class I, II, and III for more
+            severe obesity
             levels) <br>
             While BMI offers a helpful overview, it does not account for differences in muscle mass, bone density, or
             fat distribution, which can vary significantly between individuals.
