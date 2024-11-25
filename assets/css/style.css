@@ -150,6 +150,14 @@ h3 i {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#bmi-calc p, #bmr-calc p {
+    font-weight: 300;
+}
+
+#bmi-calc hr {
+    width: 70%;
+}
+
 .calculation {
     text-align: center;
 }
@@ -270,6 +278,10 @@ h3 i {
     #bmi-info {
         max-width: 95%;
         padding: 10px;
+    }
+
+    #bmi-calc hr {
+        width: 90%;
     }
 
     #info-area label,
