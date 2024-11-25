@@ -27,92 +27,103 @@
 
     <div>
         <h2>Calculate Your BMI and BMR <i class="fa-solid fa-heart-pulse"></i></h2>
+
         <div id="info-area">
+
             <label for="age">Age (2 - 110):</label>
             <input id="age" type="number" name="age" min="2" max="100" aria-describedby="age">
             <span class="error" id="error-age"></span>
+
             <div class="body-type-group">
                 <p>Body Type:
                     <label for="male">
                         <input type="radio" class="body-type" id="male" name="body-type" value="male"
-                            aria-describedby="body-type">
+                            aria-label="male body type">
                         Male</label>
                     <label for="female">
                         <input type="radio" class="body-type" id="female" name="body-type" value="female"
-                            aria-describedby="body-type">
+                            aria-label="female body type">
                         Female</label>
                 </p>
                 <span class="error" id="error-bodytype"></span>
             </div>
+
             <label for="height">Height (in cm):</label>
             <input type="number" id="height" name="height" min="10" aria-describedby="height">
             <span class="error" id="error-height"></span>
             <br>
+
             <label for="weight">Weight (in kg):</label>
             <input type="number" id="weight" name="weight" min="1" aria-describedby="weight">
             <span class="error" id="error-weight"></span>
             <br>
+
             <button id="calculate-button" class="calc-bmi-button" aria-label="Calculate BMI and BMR">Calculate BMI &
                 BMR</button>
-
             <button id="reset-button" onclick="resetButton()" class="calc-bmi-button" aria-label="Reset">Reset</button>
+
         </div>
     </div>
 
-    <div id="bmi-calc" class="calculation" data-type="bmi-calc">
+    <div id="bmi-calc" class="calculation">
         <p>YOUR BMI IS : <span aria-labelledby="bmi-value" id="bmi-value" class="bmi-value-class">0</span></p>
         <hr>
         <p>BMI CATEGORY : <span aria-labelledby="bmi-category" id="bmi-category" class="bmi-value-class"></span></p>
     </div>
 
-    <div id="bmr-calc" class="calculation" data-type="bmr-calc">
+    <div id="bmr-calc" class="calculation">
         <p>YOUR BMR IS : <span aria-labelledby="bmr-value" id="bmr-value" class="bmi-value-class">0</span></p>
     </div>
 
     <div id="bmi-info">
-
         <h2>BMI & BMR <i class="fa-solid fa-file-waveform"></i></h2>
 
-        <p><strong>Body Mass Index (BMI) and Basal Metabolic Rate (BMR)</strong> are two essential metrics used to
+        <p>
+            <strong>Body Mass Index (BMI) and Basal Metabolic Rate (BMR)</strong> are two essential metrics used to
             assess body
             composition and metabolism, often forming the basis of health and wellness evaluations.
         </p>
 
         <h3>Body Mass Index (BMI) <i class="fa-solid fa-heart-circle-plus"></i></h3>
 
-        <p><em>BMI</em> is a measurement that compares a person's weight to their height, providing a general indication
-            of body fat and helping to classify individuals into various weight categories. The formula for BMI divides
-            a person's weight in kilograms by their height in meters squared (kg/m²). BMI is used to categorize
-            individuals into classes based on standard health ranges:
+        <p>
+            <em>BMI</em> is a measurement that compares a person's weight to their height, providing a general
+            indication of body fat and helping to classify individuals into various weight categories. The formula for
+            BMI divides a person's weight in kilograms by their height in meters squared (kg/m²). BMI is used to
+            categorize individuals into classes based on standard health ranges:
             <br>
             <strong id="cate-underweight">Underweight:</strong> BMI less than 18.5 <br>
             <strong id="cate-normal">Normal weight:</strong> BMI between 18.5 and 24.9 <br>
             <strong id="cate-overweight">Overweight:</strong> BMI between 25 and 29.9 <br>
             <strong id="cate-obesity">Obesity:</strong> BMI 30 and above (subdivided into Class I, II, and III for more
             severe obesity
-            levels) <br>
+            levels)
+            <br>
             While BMI offers a helpful overview, it does not account for differences in muscle mass, bone density, or
             fat distribution, which can vary significantly between individuals.
         </p>
 
         <h3>Basal Metabolic Rate (BMR) <i class="fa-solid fa-shield-heart"></i></h3>
 
-        <p><em>BMR</em> represents the number of calories your body needs to maintain essential functions—such as
-            breathing,
-            circulation, and cell production—while at rest. This metric reflects the energy required to keep the body
-            functioning in a non-active state. BMR is influenced by factors like age, gender, body composition, and
-            genetics. Understanding your BMR can be a valuable tool in planning calorie intake and energy expenditure
-            for weight management and health. <br>
-
-            <p>Formula to calculate BMR:<br>
-                <strong>Male:</strong> BMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age in years) + 5
-                <br>
-                <strong>Female</strong> BMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age in years) - 161
-            </p>
+        <p>
+            <em>BMR</em> represents the number of calories your body needs to maintain essential functions—such as
+            breathing, circulation, and cell production—while at rest. This metric reflects the energy required to keep
+            the body functioning in a non-active state. BMR is influenced by factors like age, gender, body composition,
+            and genetics. Understanding your BMR can be a valuable tool in planning calorie intake and energy
+            expenditure for weight management and health.
+        </p>
+        <br>
+        <p>
+            Formula to calculate BMR:
             <br>
-            <p>Together, BMI and BMR offer a broader understanding of health and metabolic needs, helping individuals to
-                tailor their nutrition, exercise, and lifestyle choices.
-            </p>
+            <strong>Male:</strong> BMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age in years) + 5
+            <br>
+            <strong>Female</strong> BMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age in years) - 161
+        </p>
+        <br>
+        <p>
+            Together, BMI and BMR offer a broader understanding of health and metabolic needs, helping individuals
+            to tailor their nutrition, exercise, and lifestyle choices.
         </p>
     </div>
 
