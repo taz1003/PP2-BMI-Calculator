@@ -91,9 +91,10 @@ The users should perform following steps to calculate their BMI & BMR :
 
 ## Technologies Used
 - __Languages Used__
-  - HTML5
-  - CSS3
-    - Media queries were used to enable the responsiveness of the website for various screen sizes (480px, 768px)
+    - HTML5
+    - CSS3
+        - Media queries were used to enable the responsiveness of the website for various screen sizes (480px, 768px)
+    - Javascript
 
 - __Programmes & Libraries Used__
     1. __Chrome DevTools__
@@ -131,15 +132,15 @@ The users should perform following steps to calculate their BMI & BMR :
 
 - __Bugs Fixed__
     - In script.js :
-        - had to add (id = "calculate-button") to make sure the eventListener for the calculate button was working. Wasnt working with just class name. (lines 2-3)
-        - Wasnt able to get BMI value, was getting NaN. Fixed it after some research online. Learned to add arguments to pass them into broader scope as parameters. (line 41)
-        - During form validation, the code was continuing even after the first alert message was shown. Added "return" to ensure the discontinuation. (lines 19-31)
+        - Added (id = "calculate-button") to make sure the eventListener for the calculate button was working. Wasnt working with just class name. (lines 4)
+        - Wasnt able to get BMI value, was getting NaN. Fixed it after some research online. Learned to add arguments to pass them into broader scope as parameters. (line 90)
+        - During form validation, the code was continuing even after the first alert message was shown. Added "return" to ensure the discontinuation. (lines 37-58)
 
 ## Deployment
   - The website was deployed to Github. The steps to deploy are as follows:
     - Login to [Github](https://www.gitpod.io/) and locate the targeted repository from the repositories menu.
-    - Navigate to the settings tab and locate the 'Default Branch' section.
-    - Change the source from 'none' to 'main'
+    - Navigate to the settings tab and locate the 'Pages' tab.
+    - Under Build and Deployment section, change the Branch from 'none' to 'main'.
     - Refresh the page (if not automatically refreshed) and navigate back to the Code tab.
     - At the right side, in the Deployments section, click on github-pages and the published link will be presented there.
  
