@@ -46,7 +46,7 @@ function mainBmiBmr() {
     } else if (!height) {
         errorMessage("error-height", "Please enter your height");
         return;
-    } else if (height <= 0 || height > 300) {
+    } else if (height <= 0 || height > 250) {
         errorMessage("error-height", "Please enter a valid height");
         return;
     } else if (!weight) {

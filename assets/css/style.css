@@ -150,7 +150,8 @@ h3 i {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#bmi-calc p, #bmr-calc p {
+#bmi-calc p,
+#bmr-calc p {
     font-weight: 300;
 }
 
