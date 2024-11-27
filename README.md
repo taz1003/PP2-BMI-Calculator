@@ -127,7 +127,9 @@ The users should perform following steps to calculate their BMI & BMR :
     - [Javascript Validation Service](https://jshint.com/)
         - No errors were returned after the code present in script.js was run through jshint javascript validator. However some warnings are shown which do not affect the functionality and usabilty of the webpage whatsoever.
     - Lighthouse
-        - I confirmed that the colors, images, and fonts used in this website are easy to read and accessible by running this page through Lighthouse in Chrome DevTools.
+        - I confirmed that the colors and fonts used in this website are easy to read and accessible by running this page through Lighthouse in Chrome DevTools.
+
+    ![Lighthouse](assets/images/screenshots/bmi_calculator_lighthouse.png)
 
 
 - __Bugs Fixed__
