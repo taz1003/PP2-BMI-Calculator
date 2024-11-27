@@ -158,6 +158,7 @@ h3 i {
     width: 70%;
 }
 
+/* BMI category classes from script.js */
 .calculation {
     text-align: center;
 }
@@ -186,6 +187,7 @@ h3 i {
     font-weight: bold;
 }
 
+/* BMI and BMR info section */
 #bmi-info h3 {
     color: #009688;
     margin-bottom: 10px;
