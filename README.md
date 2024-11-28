@@ -4,27 +4,28 @@
 
 The BMI Calculator is an interactive and responsive webpage that enables users to calculate their Body Mass Index (BMI) and Basal Metabolic Rate (BMR). It provides valuable insights into body composition and metabolism, helping users make informed decisions about their health and fitness goals.
 
-This site aims to showcase how pure JavaScript operates in a real-world context. It is targeted toward individuals who are interested in implementing more advanced JavaScript concepts in relation to HTML and CSS and also have a passion for fitness. The BMI Calculator is a fully responsive, JavaScript-based website allowing users to assess their fitness levels and understand the daily calorie intake required to maintain weight.
+This site aims to showcase how pure JavaScript operates in a real-world context. It targets individuals interested in implementing more advanced JavaScript concepts about HTML and CSS and who have a passion for fitness. The BMI Calculator is a fully responsive, JavaScript-based website allowing users to assess their fitness levels and understand the daily calorie intake required to maintain weight.
 
 ![Responsive Mockup](assets/images/screenshots/bmi_calculator_mockup.png)
 
 ## Features
 
 - __Information Input Form__
-    - Information about user which are required to calculate BMI, BMI category and BMR : 
+    - User information which is required to calculate BMI, BMI category, and BMR :
         - Age
         - Body-type
-        - Height 
-        - Weight 
+        - Height
+        - Weight
     - Gender selection via radio buttons.
-    - Calculate BMI & BMR button to initiate calculation (Users can also press "Enter").
+    - Calculate the BMI & BMR buttons to initiate the calculation (Users can also press "Enter").
+    - Dedicated Reset button.
     - Dedicated Reset button.
 
     ![Information Form](assets/images/screenshots/bmi_calculator_info_form.png)
 
 - __BMI Calculator__
     - Determines your BMI using your weight and height.
-    - Categorizes BMI into the following classes:
+    - Categories BMI into the following classes:
         - Underweight: BMI < 18.5 - (displayed in Blue)
         - Normal weight: BMI 18.5–24.9 - (displayed in Green)
         - Overweight: BMI 25–29.9 - (displayed in orange)
@@ -34,7 +35,7 @@ This site aims to showcase how pure JavaScript operates in a real-world context.
     - Estimates daily calorie needs to maintain essential bodily functions based on all the information of the user.
 
 - __Result Area__
-    - Shows the result of user's BMI calculation.
+    - Shows the result of the user's BMI calculation.
     - Shows what BMI category the user falls under.
 
     ![Result Area](assets/images/screenshots/bmi_calculator_result_and_category.png)
@@ -75,10 +76,10 @@ This site aims to showcase how pure JavaScript operates in a real-world context.
     - Clean and modern UI for better user experience.
 
 ## How to Use
-The users should perform following steps to calculate their BMI & BMR :
+The users should perform the following steps to calculate their BMI & BMR :
 - Enter their age, height (in cm), and weight (in kg).
 - Select their body type (male or female).
-- Click on the Calculate BMI & BMR button or press "Enter" on keyboard.
+- Click on the Calculate BMI & BMR button or press "Enter" on the keyboard.
 - View their calculated BMI, BMI category, and BMR in the results section.
 - Use the Reset button to clear all inputs and start over.
 
@@ -99,17 +100,17 @@ The users should perform following steps to calculate their BMI & BMR :
 - __Programmes & Libraries Used__
     1. __Chrome DevTools__
         - The built-in DevTools programme in the Chrome internet browser was used throughout the project to assist with        
-    responsiveness and styling of the website.
+        responsiveness and styling of the website.
     2. __[Google Fonts](https://fonts.google.com/?preview.text=Welcome%20To%20Talent%20Knox!)__
         - Google Fonts were used to import the fonts 'Roboto' and 'Lato'.
     3. __[Font Awesome](https://fontawesome.com/)__
-        - Font Awesome kit was used on all pages to add icons for aesthetic and UX purposes. The favicon was also created using this website.
+        - Font Awesome kit was used to add icons for aesthetic and UX purposes. The favicon was also created using this website.
     4. __[Gitpod](https://www.gitpod.io/)__
         - All the coding was done using Gitpod, also the terminal was used to commit to git and push to GitHub.
     5. __[GitHub](https://github.com/)__
         - GitHub was used to store all the coding after being pushed from Gitpod.
     6. __[W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) & [W3 Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)__
-        - W3C Markup Validator and W3 Jigsaw CSS Validator were used to test and validate the HTML and CSS coding of all the pages and their styles.
+        - W3C Markup Validator and W3 Jigsaw CSS Validator were used to test and validate the HTML and CSS.
     7. __[Javascript Validation Service](https://jshint.com/)__
         - Js Hint validation service was used to test and validate the javascript codes.
     8. __[Grammarly](https://app.grammarly.com/)__
@@ -125,7 +126,7 @@ The users should perform following steps to calculate their BMI & BMR :
     - [W3 Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)
         - No errors or issues were returned after running the code present in the style.css file through the W3 Jigsaw CSS Validator.
     - [Javascript Validation Service](https://jshint.com/)
-        - No errors were returned after the code present in script.js was run through jshint javascript validator. However some warnings are shown which do not affect the functionality and usabilty of the webpage whatsoever.
+        - No errors were returned after the code present in script.js was run through Jshint javascript validator. However, some warnings are shown which do not affect the functionality and usability of the webpage whatsoever.
     - Lighthouse
         - I confirmed that the colors and fonts used in this website are easy to read and accessible by running this page through Lighthouse in Chrome DevTools.
 
@@ -134,15 +135,15 @@ The users should perform following steps to calculate their BMI & BMR :
 
 - __Bugs Fixed__
     - In script.js :
-        - Added (id = "calculate-button") to make sure the eventListener for the calculate button was working. Wasnt working with just class name. (lines 4)
-        - Wasnt able to get BMI value, was getting NaN. Fixed it after some research online. Learned to add arguments to pass them into broader scope as parameters. (line 90)
-        - During form validation, the code was continuing even after the first alert message was shown. Added "return" to ensure the discontinuation. (lines 37-58)
+        - Added (id = "calculate-button") to make sure the eventListener for the calculate button was working. Wasn't working with just the class name. (line 4)
+        - Wasn't able to get BMI value, was getting NaN. Fixed it after learning to add arguments to pass them into broader scope as parameters. (line 90)
+        - During form validation, the code continued even after the first alert message was shown. Added "return" to ensure the discontinuation. (lines 37-58)
 
 ## Deployment
   - The website was deployed to Github. The steps to deploy are as follows:
     - Login to [Github](https://www.gitpod.io/) and locate the targeted repository from the repositories menu.
     - Navigate to the settings tab and locate the 'Pages' tab.
-    - Under Build and Deployment section, change the Branch from 'none' to 'main'.
+    - Under the Build and Deployment section, change the Branch from 'none' to 'main'.
     - Refresh the page (if not automatically refreshed) and navigate back to the Code tab.
     - At the right side, in the Deployments section, click on github-pages and the published link will be presented there.
  
@@ -150,8 +151,8 @@ The users should perform following steps to calculate their BMI & BMR :
 
 
 ## Credits
-- In script.js, the error message function (lines 68 - 72) was created after a good amount research on Youtube. The video that mainly helped is - [Creating Custom Errors in JavaScript](https://www.youtube.com/watch?v=cVo186hyYsM&ab_channel=dcode).
-- In script.js, the for..of looping of arrays (lines 79 - 84) was inspired after some research on Google and Youtube. The video that helped the most is: [For of Loop with an Array in JavaScript](https://www.youtube.com/watch?v=c69Y2GpF6-U&ab_channel=Telusko).
+- In script.js, the error message function (lines 68 - 72) was created after a good amount of research on YouTube. The video that mainly helped is - [Creating Custom Errors in JavaScript](https://www.youtube.com/watch?v=cVo186hyYsM&ab_channel=dcode).
+- In script.js, the for..of looping of arrays (lines 79 - 84) was inspired after some research on Google and YouTube. The video that helped the most is: [For of Loop with an Array in JavaScript](https://www.youtube.com/watch?v=c69Y2GpF6-U&ab_channel=Telusko).
 - The code to wait for the DOM content to finish loading was taken from the [CI Love Maths project](https://taz1003.github.io/love-maths/).
 - The [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) website was extremely helpful in creating the code found in script.js.
 
